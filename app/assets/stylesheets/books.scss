@@ -11,6 +11,17 @@ body {
     margin: 33px;
 }
 
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 8px;
+    -webkit-border-horizontal-spacing: 8px;
+    -webkit-border-vertical-spacing: 8px;
+    border-color: grey;
+ }
+
 h1 {
     margin-bottom: 20px;
 }
