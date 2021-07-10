@@ -14,9 +14,8 @@ class BooksController < ApplicationController
  def create
   book = Book.new(book_params)
   if book.save
-    redirect_to book_path(book.id), success: '登録ができました'
-  else
-    render:books_path
+    redirect_to book_path(book.id), notice: 'Book was successfully created.'
+
   end
  end
 
@@ -28,8 +27,9 @@ class BooksController < ApplicationController
 
  def update
   book = Book.find(params[:id])
-  book.update(book_params)
-  redirect_to book_path(book.id)
+  if book.update(book_params)
+   redirect_to book_path(book.id), notice: 'Book was successfully updated.'
+  end
  end
 
  def destroy
